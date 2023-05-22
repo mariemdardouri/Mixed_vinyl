@@ -53,9 +53,9 @@ class MixController extends AbstractController
 
         $entityManager->flush();
         $this->addFlash('success', 'Vote counted!');
-
+        
         return $this->redirectToRoute('app_mix_show', [
-            'id' => $mix->getSlug(),
+            'slug' => $mix->getSlug(),
         ]);
     }
 }
